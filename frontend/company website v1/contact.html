@@ -111,6 +111,27 @@
         <p> © 1995-2021 SOTI Inc. All Rights Reserved. </p>
     </footer>
 
+    <script>
+        function locateMe(){
+          if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition( showLocation, locationAccessDenied )
+          }else{
+            alert('Browser doesn\'t provide support to geolocation');
+          }
+        }
+    
+        function showLocation(position){ 
+          alert('Location is accessible. You can view the co-ords in console log');
+          console.log(position.coords.latitude);
+          console.log(position.coords.longitude);
+        }
+    
+        function locationAccessDenied(){
+          alert('Location access denied');
+        }
+    
+      </script>
+      
 </body>
 
 </html>
