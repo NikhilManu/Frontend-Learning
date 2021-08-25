@@ -51,6 +51,13 @@
                 </p>
             </blockquote>
         </section>
+
+        <img src="./assets/images/Casio.png" id="img1" draggable="true" ondragstart="handleDrag(event)">
+
+        <div id="div1" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" 
+        style="border: solid 1px red;">
+            Drop Here
+        </div>
     </main>
 
     <footer>
@@ -66,6 +73,27 @@
         </nav>
         <p> © 1995-2021 SOTI Inc. All Rights Reserved. </p>
     </footer>
+
+    <script>
+        function handleDrag(event) { //event object
+            console.log('Dragging Started');
+            console.log(event);
+            event.dataTransfer.setData('droppableElement', event.target.id);
+        }
+
+        function handleDragOver(event) {
+            // allowing drop
+            event.preventDefault(); 
+        }
+
+        function handleDrop(event) {
+            event.preventDefault();
+            console.log('Dropping the Element inside the div');
+            var draggedItem = event.dataTransfer.getData('droppableElement');
+            event.target.appendChild(document.getElementById(draggedItem))
+            
+        }
+    </script>
 
 </body>
 
