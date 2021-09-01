@@ -1,7 +1,14 @@
 /* External CSS */
 
+/* Embedding font using CSS3 */
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('../assets/fonts/Pacifico-Regular.ttf');
+}
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial,Pacifico, Helvetica, sans-serif;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -222,3 +229,75 @@ p {
   .videoDesc #expert:hover{
       background: lightskyblue;
   }
+
+/* Designing the Footer */
+
+  .footer{
+      background-color: whitesmoke;
+  }
+
+  .footer #secondaryMenu, .footer p{
+      text-align: center;
+  }
+
+  .footer #secondaryMenu ul, .footer #secondaryMenu ul li{
+    display: inline-block;
+  }
+
+  .footer #secondaryMenu ul li a{
+        color: #0074aa;
+        padding: 12.5px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+  }
+
+
+/* Styling around the image */
+
+.aboutUs{
+    background: #0074aa;
+    border: solid 6px #0074aa;
+    border-radius: 50%;
+}
+
+
+/* contact Us page */
+
+input{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 12px;
+    width: 220px;
+}
+
+/* Attribute Selector */
+
+input[type='text']{
+    border: 2px solid #ccc;
+    background: honeydew;
+}
+
+input[type='text']:focus{
+    border: 1px solid red;
+    outline: none;
+}
+
+#contactForm{
+    width: 60%;
+    background: #efefef;
+    margin: 40px auto;
+    padding: 50px;
+}
+
+#contactForm label{
+    width: 50%;
+    display: inline-block;
+    text-align: right;
+    margin: 20px 0;
+}
+
+.contactFormBtns{
+    margin-left: calc(50% + 3px);
+}
+
+

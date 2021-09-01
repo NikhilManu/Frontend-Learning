@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOTI</title>
+
+    <!--External Styles-->
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
     <header>
-        <a href="./index.html"><img src="./assets/images/SOTI-Logo.png" alt="SOTI logo" width="160"></a> 
-        <nav id="Primary Menu">
+        <div id="logoBox">
+            <a href="./index.html"><img src="./assets/images/SOTI-Logo.png" alt="SOTI logo" width="160"></a>        
+        </div>
+        <nav id="primaryMenu">
             <ul>
                 <li><a href="./index.html"> Home </a></li>
                 <li><a href="./products.html"> Products </a></li>
@@ -20,7 +25,6 @@
                 <li><a href="./contact.html"> Contact Us </a></li>
             </ul>
         </nav>
-        <hr>
     </header>
 
     <main>
@@ -29,52 +33,43 @@
         <section>
             <h2>Reach Us Out by filling this Form</h2>
 
-            <input type="text" placeholder="Enter Your Query">
+            <input type="search" placeholder="Enter Your Query">
             <button type="button"> Search </button>
             
             <br><br>
-            <form action="submit.php" method="POST">
+            <form id="contactForm" action="submit.php" method="POST">
 
                 <label for="nameinput"> Enter Name </label>
                 <input type="text" id="nameinput" name="Full Name" required>
                 
-                <br><br>
                 <label for="emailInput"> Enter Email </label>
                 <input type="email" name="email" id="emailInput" required>
 
-                <br><br>
                 <label for="phoneInput"> Enter Phone </label>
                 <input type="tel" name="phone" id="phoneInput" required>
 
-                <br><br>
                 <label for="mobileInput"> Enter Mobile w/0 code </label>
                 <input type="number" name="mobile" id="mobileInput" minlength="10" maxlength="10">
                 
                 <fieldset>
                     <legend> Age Info</legend>
-                    <br><br>
                     <label for="ageInput"> Enter Age </label>
                     <input type="number" name="age" id="ageInput" min="18" max="60">
                     
-                    <br><br>
                     <label for="dobInput"> Enter DOB </label>
                     <input type="date" name="dob" id="dobInput">
                 </fieldset>
 
-                <br><br>
                 <label for="interest"> Interest level for out Trail Version </label>
                 <input type="range" name="interest" min="0" max="5" step="1" value="0">
                 
-                <br><br>
                 <label for="favColor"> Your Facourite Color </label>
                 <input type="color" id="favColor">
 
-                <br><br>
                 <label for="queryInput"> Enter your Query </label>
-                <br>
+
                 <textarea maxlength="256" id="queryInput" name="query" cols="60" rows="10"></textarea>
                 
-                <br><br>
                 <input type="submit" value="submit Query">
                 <button type="reset">Reset</button>
             </form>
@@ -99,9 +94,9 @@
         </aside>
     </main>
 
-    <footer>
+    <footer class="footer">
         <hr>
-        <nav id="Secondary Menu">
+        <nav id="secondaryMenu">
             <ul>
                 <li><a href="./index.html"> Home </a></li>
                 <li><a href="./products.html"> Products </a></li>
