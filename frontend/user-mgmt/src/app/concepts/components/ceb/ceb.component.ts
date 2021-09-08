@@ -31,6 +31,6 @@ export class CebComponent implements OnInit {
   handleSendData() {
     console.log('Sending data to Parent')
     // Step 4: Sneding the data through emit method
-    this.profileLoaded.emit(this.profileData)
+    this.profileLoaded.emit(this.profileData) 
   }
 }
