@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  sampleText = "Testing sentence...";
+
+  bigText = "Testing Testing Testing testing Testing Testing Testing Testing testing Testing Testing Testing Testing testing Testing";
+
+  today: Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {

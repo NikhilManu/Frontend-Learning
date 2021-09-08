@@ -1,1 +1,30 @@
-<p>about works!</p>
+<div class="container">
+    <h1> Pipes </h1>
+    <p> Transform into from one format to another</p>
+
+    <h2>Uppercase & Lowecase</h2>
+    <p>((sampleText}}</p>
+    <p>{{sampleText |uppercase}}</p>
+    <p>{{sampleText |lowercase}}</p>
+
+    <hr>
+    <h3>Date Pipe</h3>
+    <p>{{today}}</p>
+    <p>{{today | date}}</p>
+    <!-- Parameterized Pipes-->
+    <p>{{today | date: 'dd/MMMM/yyyy'}}</p>
+    <p>{{today | date: 'yyyy - MM - dd'}}</p>
+    <p>{{today | date: 'yyyy - MM - dd @ hh:mm a'}}</p>
+    <p>{{today | date: 'yyyy - MM - dd @ hh:mm:ss a'}}</p>
+
+    <!-- Chaining Pipes -->
+    <p>{{today | date: 'yyyy - MM - dd @ hh:mm:ss a'| uppercase}}</p>
+
+    <h4>Custom Pipes</h4>
+
+    <p>{{bigText}}</p>
+    
+    <p>{{bigText | ellipsis}}</p>
+
+    <p>{{bigText | ellipsis : 10}}</p>
+</div>
